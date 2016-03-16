@@ -36,6 +36,7 @@ window.onload = function() {
 
             document.getElementById(id).innerHTML = days + ':' + hours + ':' + minutes + ':' + seconds;
         }
+        showRemaining();
         timer = setInterval(showRemaining, 1000);
     }
     CountDownTimer('04/22/2016 18:00', 'countdown');

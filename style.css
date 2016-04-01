@@ -132,7 +132,7 @@ hr {
 }
 
 .destination:nth-child(odd) {
-    background: #fafafa;
+    background: #fcfcfc;
 }
 
 .destination-image {
@@ -152,13 +152,8 @@ hr {
     padding: 20px;
 }
 
-.destination:first-child .destination-body {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.destination-body {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
+.destination:not(:last-child) .destination-body {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 @media (max-width: 500px) {

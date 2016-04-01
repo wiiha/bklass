@@ -68,7 +68,7 @@ hr {
     display: flex;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center;;
+            align-items: center;
 }
 
 .logo .divider hr {
@@ -107,10 +107,10 @@ hr {
 
 .container-content {
     margin: 0 auto;
+    max-width: 800px;
 }
 
 .container-1 .container-content {
-    max-width: 800px;
     padding: 20px;
     color: #ffffff;
 }
@@ -126,76 +126,58 @@ hr {
     font-size: 18px;
 }
 
-.container-2 .container-content {
-    max-width: 1280px;
-}
-
 .destination {
-    display: inline-block;
-    position: relative;
-    float: left;
-    height: 300px;
+    height: 150px;
     background: #ffffff;
 }
 
-.destination:nth-child(-n + 3) {
-    width: calc(100% / 2);
+.destination:nth-child(odd) {
+    background: #fafafa;
 }
 
-.destination:nth-child(n + 3) {
-    width: calc(100% / 3);
-}
-
-@media (max-width: 800px) {
-    .destination:nth-child(-n + 5) {
-        width: calc(100% / 2);
-    }
-
-    .destination:nth-child(n + 5) {
-        width: 100%;
-    }
-}
-
-@media (max-width: 500px) {
-    .destination {
-        width: 100% !important;
-    }
-}
-
-.destination {
+.destination-image {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    width: 250px;
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: cover !important;
-    position: relative;
-    height: 20vh;
-    text-align: center;
 }
 
-.destination-content {
-    width: 100%;
-    height: 40%;
-    bottom: 0;
-    position: absolute;
+.destination-body {
+    display: inline-block;
+    width: calc(100% - 250px);
+    height: 100%;
+    padding: 20px;
 }
 
-.destination-content::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: #000000;
-    opacity: 0.5;
+.destination:first-child .destination-body {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.destination-content h3 {
+.destination-body {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 500px) {
+    .destination-image {
+        width: 30vw;
+    }
+
+    .destination-body {
+        width: calc(100% - 30vw);
+    }
+}
+
+.destination-body h3 {
     margin: 0;
+    color: #f05f40;
 }
 
-.destination-content * {
-    position: relative;
-    color: #ffffff;
+.destination-body p {
+
 }
 
 #countdown {

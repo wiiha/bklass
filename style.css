@@ -12,8 +12,12 @@ body {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, p, span, body {
+h1, h2, h3, h4, h5, p, span, body, label, button {
     color: #333333;
+}
+
+textarea {
+    font-family: inherit;
 }
 
 hr {
@@ -187,10 +191,6 @@ hr {
     color: #f05f40;
 }
 
-.destination-body p {
-
-}
-
 .container-3 {
     background: #ffffff;
 }
@@ -201,4 +201,74 @@ hr {
     font-weight: bold;
     text-align: center;
     padding: 20px 0;
+}
+
+.container-4 {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.container-4 .container-content {
+    padding: 20px;
+    background: #ffffff;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+}
+
+.container-4 .container-content p {
+    font-size: 18px;
+}
+
+#form label {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#form input, #form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #C5C5C5;
+    border-radius: 2px;
+}
+
+#form textarea {
+    resize: none;
+    height: 100px
+}
+
+#form .button-container {
+    display: inline-block;
+    width: 100%;
+}
+
+#form button {
+    background: #fcfcfc;
+    border: 1px solid #C5C5C5;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    float: right;
+}
+
+#form button:hover {
+    background: #F5F5F5;
+}
+
+#form button:active {
+    background: #E8E8E8;
+}
+
+#form-success {
+    display: none;
+}
+
+#form-success span {
+    font-size: 18px;
 }

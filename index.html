@@ -1,4 +1,3 @@
-
 <!doctype HTML>
 <html lang="en-US">
     <head>
@@ -21,6 +20,39 @@
                 <h2>DEPARTURE DELAYED</h2>
             </div>
             <i class="fa fa-chevron-down down-arrow"></i>
+        </div>
+        <div class="container-4">
+            <div class="container-content">
+                <p>Fyll i detta formulär för att få en plats på sittningen. Då det endast finns ett begränsat antal platser kommer de första som skrivit upp sig efter ett litet tag få ett mail med Swish-nummer till betalningen. Om man inte var bland de första kommer man skrivas upp på reservlistan där man släpps in om det finns plats.</p>
+                <form id="form">
+                    <label>
+                        Namn
+                        <input name="Name" type="text" required>
+                    </label>
+                    <label>
+                        LiU-ID
+                        <input name="LiU-ID" type="text" required>
+                    </label>
+                    <label>
+                        Årskurs
+                        <input name="Year" type="number" pattern="\d*" required>
+                    </label>
+                    <label>
+                        E-post (Information om betalning skickas hit)
+                        <input name="Mail" type="email" required>
+                    </label>
+                    <label>
+                        Allergier
+                        <textarea name="Allergies" placeholder="Lämna detta fält tomt om du inte har några allergier"></textarea>
+                    </label>
+                    <div class="button-container">
+                        <button type="submit">Skicka</button>
+                    </div>
+                </form>
+                <div id="form-success">
+                    <span>Ditt svar är registrerat. Du kommer snart få ett mail <span id="mail"></span>med information om betalning om du fick en plats.</span>
+                </div>
+            </div>
         </div>
         <div class="container-1">
             <div class="container-content">
@@ -84,6 +116,7 @@
         <div class="container-3">
             <div id="countdown"></div>
         </div>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

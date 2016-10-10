@@ -1,274 +1,73 @@
-html {
-    height: 100%;
-}
-
 body {
-    font-family: Roboto, sans-serif;
-    margin: 0;
-    background: #f5f5f5;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, p, span, body, label, button {
-    color: #333333;
-}
-
-textarea {
-    font-family: inherit;
-}
-
-hr {
-    border: none;
-    width: 100%;
-    height: 2px;
     margin: 0;
 }
 
-.hero-image {
-    height: 80vh;
-    background: url(assets/hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    text-align: center;
-}
-
-.hero-image::before {
-    content: '';
+h1 {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #868686;
-    opacity: 0.4;
-}
-
-.logo {
-    position: relative;
-    display: inline-block;
     top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    font-family: sans-serif;
-    color: #ffffff;
-    margin: 0;
-}
-
-.logo h1 {
-    margin: 0;
-    font-size: 6vh;
-    color: inherit;
-}
-
-.logo .divider {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-
-.logo .divider hr {
-    height: 1vh;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    background: #f05f40;
-}
-
-.logo .divider .airplane {
-    font-size: 4vh;
-    margin: -1vh 2vh;
-    color: inherit;
-}
-
-.logo h2 {
-    margin: 0;
-    font-size: 4.55vh;
-    color: inherit;
-}
-
-.hero-image .down-arrow {
-    position: absolute;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    bottom: 3vh;
-    color: #ffffff;
-    font-size: 7vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 80px;
+    animation: color-change 0.2s infinite, rotate 2s linear infinite;
 }
 
-.container-1 {
-    background: #ffffff;
-}
-
-.container-content {
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.container-1 .container-content {
-    padding: 20px;
-    color: #ffffff;
-}
-
-.container-1 .container-content h2 {
-    color: #f05f40;
-    text-align: center;
-    font-size: 32px;
-    margin: 10px;
-}
-
-.container-1 .container-content p {
-    font-size: 18px;
-}
-
-.container-2 {
-    border-top: 1px solid #f0f0f0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.container-2 .container-content {
-    border-left: 1px solid #f0f0f0;
-    border-right: 1px solid #f0f0f0;
-}
-
-.container-2 .container-content h2 {
-    color: #f05f40;
-    background: #ffffff;
-    margin: 0;
-    text-align: center;
-    padding: 22px 0 20px 0;
-    font-size: 32px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.destination {
-    height: 150px;
-    background: #ffffff;
-}
-
-.destination-image {
-    display: inline-block;
-    float: left;
-    height: 100%;
-    width: 250px;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-size: cover !important;
-}
-
-.destination-body {
-    display: inline-block;
-    width: calc(100% - 250px);
-    height: 100%;
-    padding: 20px;
-}
-
-.destination:not(:last-child) .destination-body {
-    border-bottom: 1px solid #f0f0f0;
-}
-
-@media (max-width: 500px) {
-    .destination-image {
-        width: 30vw;
-    }
-
-    .destination-body {
-        width: calc(100% - 30vw);
-    }
-}
-
-.destination-body h3 {
-    margin: 0;
-    color: #f05f40;
-}
-
-.container-3 {
-    background: #ffffff;
-}
-
-#countdown {
-    color: #f05f40;
-    font-size: calc(50px + 1vw);
-    font-weight: bold;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.container-4 {
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.container-4 .container-content {
-    padding: 20px;
-    background: #ffffff;
-    border-left: 1px solid #f0f0f0;
-    border-right: 1px solid #f0f0f0;
-}
-
-.container-4 .container-content p {
-    font-size: 18px;
-}
-
-#form label {
-    display: block;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-#form input, #form textarea {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0 10px 0;
-    border: 1px solid #C5C5C5;
-    border-radius: 2px;
-}
-
-#form textarea {
-    resize: none;
-    height: 100px
-}
-
-#form .button-container {
-    display: inline-block;
-    width: 100%;
-}
-
-#form button {
-    background: #fcfcfc;
-    border: 1px solid #C5C5C5;
-    border-radius: 2px;
-    cursor: pointer;
-    outline: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    float: right;
-}
-
-#form button:hover {
-    background: #F5F5F5;
-}
-
-#form button:active {
-    background: #E8E8E8;
-}
-
-#form-success {
+iframe {
     display: none;
 }
 
-#form-success span {
-    font-size: 18px;
+img {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 800px;
+  animation: harambe 5s infinite;
+}
+
+@keyframes harambe {
+  0% { opacity: 0.03; }
+  50% { opacity: 0.15; }
+  100% { opacity: 0.03; }
+}
+
+@keyframes color-change {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: yellow; }
+    100% {color: red; }
+}
+
+@keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% {transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+  animation:move-twink-back 200s linear infinite;
 }

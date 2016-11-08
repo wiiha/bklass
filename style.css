@@ -1,73 +1,32 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+}
+
 body {
     margin: 0;
+    padding: 40px;
 }
 
-h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    font-size: 80px;
-    animation: color-change 0.2s infinite, rotate 2s linear infinite;
+#registration-form {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-iframe {
+#registration-form > label {
+    display: block;
+}
+
+#registration-form h2 {
+
+}
+
+#registration-form label input:not([type='radio']), #registration-form label textarea {
+    width: 100%;
+}
+
+#form-success, #form-failure {
     display: none;
-}
-
-img {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 800px;
-  animation: harambe 5s infinite;
-}
-
-@keyframes harambe {
-  0% { opacity: 0.03; }
-  50% { opacity: 0.15; }
-  100% { opacity: 0.03; }
-}
-
-@keyframes color-change {
-    0% { color: red; }
-    25% { color: blue; }
-    50% { color: green; }
-    75% { color: yellow; }
-    100% {color: red; }
-}
-
-@keyframes rotate {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% {transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-
-.stars, .twinkling {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
-}
-
-.stars {
-  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:0;
-}
-
-.twinkling{
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-  z-index:1;
-  animation:move-twink-back 200s linear infinite;
 }

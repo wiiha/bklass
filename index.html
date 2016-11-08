@@ -3,14 +3,55 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Gick vi?</title>
+        <title>B-KLASS</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Sa någon B-klass?</h1>
-        <img src="harambe.png">
-        <div class="stars"></div>
-        <div class="twinkling"></div>
-        <iframe src="https://www.youtube.com/embed/bKGxhq9hPdo?&autoplay=1&loop=1&playlist=bKGxhq9hPdo"></iframe>
-    </body>
+        <div id="page-container">
+            <form id="registration-form">
+                <label>
+                    <h2>Namn</h2>
+                    <input name="Namn" type="text" required>
+                </label>
+                <label>
+                    <h2>Årskurs</h2>
+                    <input name="Årskurs" type="number" pattern="\d*" required>
+                </label>
+                <label>
+                    <h2>E-post</h2>
+                    <input name="Epost" type="email" required>
+                </label>
+                <label>
+                    <h2>Specialkost</h2>
+                    <textarea name="Specialkost"></textarea>
+                </label>
+                <label>
+                    <h2>Alkoholfritt</h2>
+                    <label><input type="radio" name="Alkoholfritt" value="nej" checked>Nej</label>
+                    <label><input type="radio" name="Alkoholfritt" value="ja">Ja</label>
+                </label>
+                <label>
+                    <h2>Flammanjobbare</h2>
+                    <label><input type="radio" name="Flammanjobbare" value="nej" checked>Nej</label>
+                    <label><input type="radio" name="Flammanjobbare" value="ja">Ja</label>
+                </label>
+                <button type="submit">Skicka</button>
+            </form>
+
+            <div id="form-success">
+                Snyggt! Ett mail har skickats till <span id="mail"></span> där det står hur du ska betala.
+            </div>
+
+            <div id="form-failure">
+                Woops, något gick fel! Försök igen.
+            </div>
+        </div>
+
+        <!-- SCRITPS -->
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        </body>
 </html>

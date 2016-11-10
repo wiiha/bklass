@@ -125,7 +125,7 @@ body {
     background-color: #EAEAEA;
 }
 
-#form-success, #form-failure {
+#form-success {
     display: none;
     max-width: 600px;
     margin: 0 auto;

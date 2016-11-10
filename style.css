@@ -1,13 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: -apple-system, BlinkMacSystemFont,
         "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
         "Fira Sans", "Droid Sans", "Helvetica Neue",
         sans-serif;
+    height: 100%;
 }
 
 body {
     margin: 0;
-    padding: 40px;
+    padding: 20px;
+    min-height: 100%;
+    position: relative;
+}
+
+#page-container {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+#page-title {
+    max-width: 600px;
+    margin: 0 auto;
+    background: -webkit-linear-gradient(left, red, blue);
+    background: linear-gradient(to right, red, blue);
+    text-align: center;
+    padding: 20px 0;
+}
+
+#page-title img {
+    width: 50px;
+}
+
+#page-title h1 {
+    font-size: 70px;
+    margin: 0;
+    text-shadow: -7px 0 black, 0 7px black, 7px 0 black, 0 -7px black;
+    display: inline-block;
 }
 
 #registration-form {
@@ -19,14 +52,139 @@ body {
     display: block;
 }
 
-#registration-form h2 {
+#registration-form .title-container {
+    background: -webkit-linear-gradient(left, red, blue);
+    background: linear-gradient(to right, red, blue);
+    margin: 30px 0 10px 0;
+    padding: 10px;
+}
 
+#registration-form h2 {
+    font-size: 48px;
+    margin: 0;
+    text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+#registration-form h2:before, #registration-form h2:after {
+    content: '';
+    display: inline-block;
+    background: transparent url(assets/flame.gif) no-repeat center center;
+    background-size: contain;
+    width: 60px;
+    height: 50px;
 }
 
 #registration-form label input:not([type='radio']), #registration-form label textarea {
     width: 100%;
+    border: 1px solid #eee;
+    padding: 10px 16px;
+    font-size: 18px;
+}
+
+#registration-form label textarea {
+    font-family: inherit;
+    resize: none;
+}
+
+.radio-input-container {
+    font-size: 20px;
+    background: #fff;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.radio-input-container label:not(:last-of-type) {
+    padding-right: 20px;
+}
+
+#submit-button-container {
+    background: -webkit-linear-gradient(top left, red, blue, red);
+    background: linear-gradient(to bottom right, red, blue, red);
+    display: inline-block;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+#submit-button-container button {
+    padding: 10px;
+    display: block;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: none;
+}
+
+#submit-button-container button:hover {
+    background-color: #EAEAEA;
 }
 
 #form-success, #form-failure {
     display: none;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 20px;
+    background: #fff;
+    color: black;
+}
+
+#stars {
+    background: #000 url(assets/stars.png) repeat top center;
+}
+
+#twinkling {
+    background: transparent url(assets/twinkling.png) repeat top center;
+    -webkit-animation: move-twink-back 200s linear infinite;
+            animation: move-twink-back 200s linear infinite;
+}
+
+#stars, #twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@-webkit-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    } to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    } to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@media (max-width: 620px) {
+    #page-title img {
+        width: calc(8vw + 5px);
+    }
+
+    #page-title h1 {
+        font-size: 8vw;
+    }
+
+    #registration-form h2 {
+        font-size: calc(5px + 6vw);
+    }
+
+    #registration-form h2:before, #registration-form h2:after {
+        width: calc(10vw + 10px);
+        height: calc(8vw + 6px);
+    }
 }

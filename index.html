@@ -3,48 +3,77 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>B-KLASS</title>
+        <title>🔥 B-KLASS 🔥</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="page-container">
+            <div id="page-title">
+                <img src="assets/flame.gif">
+                <img src="assets/flame.gif">
+                <h1>B-KLASS</h1>
+                <img src="assets/flame.gif">
+                <img src="assets/flame.gif">
+            </div>
+
             <form id="registration-form">
                 <label>
-                    <h2>Namn</h2>
-                    <input name="Namn" type="text" required>
+                    <div class="title-container">
+                        <h2>Namn</h2>
+                    </div>
+                    <input name="Namn" type="text" placeholder="Ditt namn" required>
                 </label>
                 <label>
-                    <h2>Årskurs</h2>
-                    <input name="Årskurs" type="number" pattern="\d*" required>
+                    <div class="title-container">
+                        <h2>Årskurs</h2>
+                    </div>
+                    <input name="Årskurs" type="number" pattern="\d*" placeholder="Din årskurs" required>
                 </label>
                 <label>
-                    <h2>E-post</h2>
-                    <input name="Epost" type="email" required>
+                    <div class="title-container">
+                        <h2>E-post</h2>
+                    </div>
+                    <input name="Epost" type="email" placeholder="Din e-postadress" required>
                 </label>
                 <label>
-                    <h2>Specialkost</h2>
-                    <textarea name="Specialkost"></textarea>
+                    <div class="title-container">
+                        <h2>Specialkost</h2>
+                    </div>
+                    <textarea name="Specialkost" placeholder="Lämna detta fält om du inte har någon specialkost"></textarea>
                 </label>
                 <label>
-                    <h2>Alkoholfritt</h2>
-                    <label><input type="radio" name="Alkoholfritt" value="nej" checked>Nej</label>
-                    <label><input type="radio" name="Alkoholfritt" value="ja">Ja</label>
+                    <div class="title-container">
+                        <h2>Alkoholfritt</h2>
+                    </div>
+                    <div class="radio-input-container">
+                        <label><input type="radio" name="Alkoholfritt" value="nej" checked>Nej</label>
+                        <label><input type="radio" name="Alkoholfritt" value="ja">Ja</label>
+                    </div>
                 </label>
                 <label>
-                    <h2>Flammanjobbare</h2>
-                    <label><input type="radio" name="Flammanjobbare" value="nej" checked>Nej</label>
-                    <label><input type="radio" name="Flammanjobbare" value="ja">Ja</label>
+                    <div class="title-container">
+                        <h2>Flammanjobbare</h2>
+                    </div>
+                    <div class="radio-input-container">
+                        <label><input type="radio" name="Flammanjobbare" value="nej" checked>Nej</label>
+                        <label><input type="radio" name="Flammanjobbare" value="ja">Ja</label>
+                    </div>
                 </label>
-                <button type="submit">Skicka</button>
+                <div id="submit-button-container">
+                    <button type="submit">Skicka</button>
+                </div>
             </form>
 
             <div id="form-success">
             </div>
 
             <div id="form-failure">
-                Woops, något gick fel! Försök igen.
+                Woops, något gick fel! Vänligen försök igen.
             </div>
         </div>
+
+        <div id="stars"></div>
+        <div id="twinkling"></div>
 
         <!-- SCRITPS -->
         <script

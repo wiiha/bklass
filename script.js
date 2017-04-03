@@ -15,7 +15,7 @@ window.onload = function() {
         $inputs.prop('disabled', true)
 
         request = $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbwm70Tm07G5xew6YaVUI6KVo0BbYdMcQR6Sn-0gQ2J8xgzjIQ/exec',
+            url: 'https://script.google.com/macros/s/AKfycbyFVvG1p5QWsWvuEOKcdP0IA39MG_okHE0LH-dpV8c4puctRnR2/exec',
             type: 'post',
             data: serializedData
         })

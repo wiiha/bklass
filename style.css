@@ -17,6 +17,10 @@ body {
     position: relative;
 }
 
+iframe{
+  display: none;
+}
+
 #page-container {
     position: relative;
     z-index: 1;
